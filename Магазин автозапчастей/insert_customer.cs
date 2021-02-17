@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Магазин_автозапчастей
 {
-    public partial class Form1 : Form
+    public partial class insert_customer : Form
     {
-        public Form1()
+        public insert_customer()
         {
             InitializeComponent();
         }
