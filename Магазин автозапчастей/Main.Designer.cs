@@ -344,9 +344,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(909, 294);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.Size = new System.Drawing.Size(99, 19);
             this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.label4.Text = "Поставщики";
             // 
             // comboBox1
             // 
@@ -361,9 +361,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(909, 366);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 19);
+            this.label5.Size = new System.Drawing.Size(37, 19);
             this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
+            this.label5.Text = "Тип";
             // 
             // comboBox2
             // 
@@ -378,9 +378,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(909, 430);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 19);
+            this.label6.Size = new System.Drawing.Size(45, 19);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
+            this.label6.Text = "Цена";
             // 
             // textBox2
             // 
