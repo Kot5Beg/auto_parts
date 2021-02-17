@@ -16,7 +16,7 @@ namespace Магазин_автозапчастей
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new autorization());
+            Application.Run(new Form1());
         }
     }
 }
