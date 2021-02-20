@@ -162,21 +162,29 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(862, 249);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Фильтрация";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(909, 294);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "label4";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(867, 300);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(267, 27);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(909, 366);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 19);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "label5";
             // 
             // comboBox2
             // 
@@ -186,7 +194,12 @@
             this.comboBox2.Size = new System.Drawing.Size(267, 27);
             this.comboBox2.TabIndex = 9;
             // 
-            // filter
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(909, 430);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 19);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "label6";
             // 
             this.filter.Location = new System.Drawing.Point(937, 419);
             this.filter.Name = "filter";
