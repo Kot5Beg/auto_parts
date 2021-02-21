@@ -11,47 +11,44 @@ using System.Data.SqlClient;
 
 namespace Магазин_автозапчастей
 {
-    public partial class upd_cust : Form
+    public partial class upd_prov : Form
     {
         public static string id { get; set; }
-        public static string surname { get; set; }
-        public static string name { get; set; }
-        public static string patronymic { get; set; }
+        public static string appelation { get; set; }
         public static string address { get; set; }
         public static string phone { get; set; }
+        public static string site { get; set; }
 
-        public upd_cust()
+        public upd_prov()
         {
             InitializeComponent();
         }
 
-        public upd_cust(string ID, string Surname, string Name, string Patronymic, string Address, string Phone)
+        public upd_prov(string ID, string Appelation, string Address, string Phone, string Site)
         {
             InitializeComponent();
             id = ID;
-            surname = Surname;
-            name = Name;
-            patronymic = Patronymic;
+            appelation = Appelation;
             address = Address;
             phone = Phone;
-            TextLoad();
+            site = Site;
+            LoadText();
         }
 
-        public void TextLoad()
+        public void LoadText()
         {
-            textBox1.Text = surname;
-            textBox5.Text = name;
-            textBox4.Text = patronymic;
+            textBox1.Text = appelation;
             textBox2.Text = address;
             textBox3.Text = phone;
+            textBox4.Text = site;
         }
 
-        private void upd_but_cust_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 DataBase.OpenCon();
-                string save = String.Format("UPDATE {0} SET Surname = '{1}', Name = '{2}', Patronymic = '{3}', Address = '{4}', Phone = '{5}' WHERE ID = '{6}'", "Customers", textBox1.Text, textBox5.Text, textBox4.Text, textBox2.Text, textBox3.Text, id);
+                string save = String.Format("UPDATE {0} SET Appelation = '{1}', Address = '{2}', Phone = '{3}', Site = '{4}' WHERE ID = '{5}'", "Providers", textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, id);
                 SqlCommand com = new SqlCommand(save, DataBase.Con);
                 com.ExecuteNonQuery();
                 MessageBox.Show("Запись успешно изменена");
@@ -59,7 +56,7 @@ namespace Магазин_автозапчастей
             }
             catch
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Ошибка редактирования");
             }
         }
     }

@@ -72,7 +72,15 @@ namespace Магазин_автозапчастей
 
         private void button2_Click(object sender, EventArgs e)
         {
-            upd_cust uc = new upd_cust();
+            List<string> cust = new List<string>();
+            var number = customer_list.CurrentCell.RowIndex;
+            DataGridViewRow row = customer_list.Rows[number];
+            upd_cust uc = new upd_cust(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString(),
+                row.Cells[5].Value.ToString());
             uc.ShowDialog();
         }
 
@@ -84,7 +92,14 @@ namespace Магазин_автозапчастей
 
         private void button5_Click(object sender, EventArgs e)
         {
-            upd_sale us = new upd_sale();
+            List<string> sale = new List<string>();
+            var number = sale_list.CurrentCell.RowIndex;
+            DataGridViewRow row = sale_list.Rows[number];
+            upd_sale us = new upd_sale(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString());
             us.ShowDialog();
         }
 
@@ -96,7 +111,14 @@ namespace Магазин_автозапчастей
 
         private void update_ship_Click(object sender, EventArgs e)
         {
-            upd_ship us = new upd_ship();
+            List<string> ship = new List<string>();
+            var number = shipment_list.CurrentCell.RowIndex;
+            DataGridViewRow row = shipment_list.Rows[number];
+            upd_ship us = new upd_ship(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString());
             us.ShowDialog();
         }
 
@@ -120,7 +142,7 @@ namespace Магазин_автозапчастей
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            string shipsearch = "SELECT * FROM Shipments WHERE CONCAT (ID_Detail, ID_Provider, Quantity, Date) LIKE '%" + textBox5.Text + "%' ";
+            string shipsearch = "SELECT * FROM Shipments WHERE CONCAT (ID_Details, ID_Provider, Quantity, Date) LIKE '%" + textBox5.Text + "%' ";
             Loading(shipsearch, shipment_list);
         }
 

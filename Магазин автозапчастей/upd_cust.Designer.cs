@@ -130,6 +130,7 @@
             this.upd_but_cust.TabIndex = 12;
             this.upd_but_cust.Text = "Сохранить";
             this.upd_but_cust.UseVisualStyleBackColor = true;
+            this.upd_but_cust.Click += new System.EventHandler(this.upd_but_cust_Click);
             // 
             // label3
             // 
@@ -158,7 +159,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.upd_but_cust);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "upd_cust";
             this.Text = "Изменение заказчика";
             this.ResumeLayout(false);

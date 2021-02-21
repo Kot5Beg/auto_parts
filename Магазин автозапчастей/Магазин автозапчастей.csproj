@@ -52,6 +52,24 @@
     <Compile Include="add_cust.Designer.cs">
       <DependentUpon>add_cust.cs</DependentUpon>
     </Compile>
+    <Compile Include="add_det.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_det.Designer.cs">
+      <DependentUpon>add_det.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_detail.Designer.cs">
+      <DependentUpon>add_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_prov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_prov.Designer.cs">
+      <DependentUpon>add_prov.cs</DependentUpon>
+    </Compile>
     <Compile Include="add_sale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +109,18 @@
     <Compile Include="upd_cust.Designer.cs">
       <DependentUpon>upd_cust.cs</DependentUpon>
     </Compile>
+    <Compile Include="upd_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upd_detail.Designer.cs">
+      <DependentUpon>upd_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="upd_prov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upd_prov.Designer.cs">
+      <DependentUpon>upd_prov.cs</DependentUpon>
+    </Compile>
     <Compile Include="upd_sale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +136,23 @@
     <EmbeddedResource Include="add_cust.resx">
       <DependentUpon>add_cust.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="add_det.resx">
+      <DependentUpon>add_det.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_detail.resx">
+      <DependentUpon>add_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_prov.resx">
+      <DependentUpon>add_prov.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="add_sale.resx">
       <DependentUpon>add_sale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="add_shipcs.resx">
       <DependentUpon>add_shipcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="autorization.resx">
       <DependentUpon>autorization.cs</DependentUpon>
@@ -129,6 +171,12 @@
     </Compile>
     <EmbeddedResource Include="upd_cust.resx">
       <DependentUpon>upd_cust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upd_detail.resx">
+      <DependentUpon>upd_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upd_prov.resx">
+      <DependentUpon>upd_prov.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="upd_sale.resx">
       <DependentUpon>upd_sale.cs</DependentUpon>
