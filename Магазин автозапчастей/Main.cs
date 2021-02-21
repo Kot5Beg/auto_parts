@@ -96,5 +96,41 @@ namespace Магазин_автозапчастей
             upd_ship us = new upd_ship();
             us.ShowDialog();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string det_search = "SELECT * FROM Details WHERE CONCAT (Appelation, Article_number, Price, Notes) LIKE '%" + textBox2.Text + "%' ";
+            Loading(det_search, detail_list);
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            string histsearch = "SELECT * FROM History_Price WHERE CONCAT (ID_Detail, Date_Price, Price) LIKE '%" + textBox3.Text + "%' ";
+            Loading(histsearch, history_list);
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            string provsearch = "SELECT * FROM Providers WHERE CONCAT (Appelation, Address, Phone, Site) LIKE '%" + textBox4.Text + "%' ";
+            Loading(provsearch, provider_list);
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            string shipsearch = "SELECT * FROM Shipments WHERE CONCAT (ID_Detail, ID_Provider, Quantity, Date) LIKE '%" + textBox5.Text + "%' ";
+            Loading(shipsearch, shipment_list);
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            string custsearch = "SELECT * FROM Customers WHERE CONCAT (Surname, Name, Patronymic, Address, Phone) LIKE '%" + textBox6.Text + "%' ";
+            Loading(custsearch, customer_list);
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            string salesearch = "SELECT * FROM Sales WHERE CONCAT (ID_Customer, ID_Details, Quantity, Price) LIKE '%" + textBox7.Text + "%' ";
+            Loading(salesearch, sale_list);
+        }
     }
 }
