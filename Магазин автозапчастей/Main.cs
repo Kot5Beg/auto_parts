@@ -183,5 +183,173 @@ namespace Магазин_автозапчастей
                 MessageBox.Show("Ошибка удаления");
             }
         }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked == true)
+            {
+                string cust = "SELECT * FROM Customers ORDER BY Surname ASC";
+                Loading(cust, customer_list);
+                checkBox8.Enabled = false;
+                checkBox9.Enabled = false;
+            }
+            else if (checkBox10.Checked == false)
+            {
+                string cust = "SELECT * FROM Customers";
+                Loading(cust, customer_list);
+                checkBox8.Enabled = true;
+                checkBox9.Enabled = true;
+            }
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked == true)
+            {
+                string cust = "SELECT * FROM Customers ORDER BY Name ASC";
+                Loading(cust, customer_list);
+                checkBox9.Enabled = false;
+                checkBox10.Enabled = false;
+            }
+            else if (checkBox8.Checked == false)
+            {
+                string cust = "SELECT * FROM Customers";
+                Loading(cust, customer_list);
+                checkBox9.Enabled = true;
+                checkBox10.Enabled = true;
+            }
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked == true)
+            {
+                string cust = "SELECT * FROM Customers ORDER BY Patronymic ASC";
+                Loading(cust, customer_list);
+                checkBox8.Enabled = false;
+                checkBox10.Enabled = false;
+            }
+            else if (checkBox10.Checked == false)
+            {
+                string cust = "SELECT * FROM Customers";
+                Loading(cust, customer_list);
+                checkBox8.Enabled = true;
+                checkBox10.Enabled = true;
+            }
+        }
+
+        private void alpha_sortirovka_CheckedChanged(object sender, EventArgs e)
+        {
+            if (alpha_sortirovka.Checked == true)
+            {
+                string det = "SELECT * FROM Details ORDER BY Appelation ASC";
+                Loading(det, detail_list);
+                price_down.Enabled = false;
+                price_up.Enabled = false;
+            }
+            else if (alpha_sortirovka.Checked == false)
+            {
+                string det = "SELECT * FROM Details";
+                Loading(det, detail_list);
+                price_down.Enabled = true;
+                price_up.Enabled = true;
+            }
+        }
+
+        private void price_down_CheckedChanged(object sender, EventArgs e)
+        {
+            if (price_down.Checked == true)
+            {
+                string det = "SELECT * FROM Details ORDER BY Price ASC";
+                Loading(det, detail_list);
+                price_up.Enabled = false;
+                alpha_sortirovka.Enabled = false;
+            }
+            else if (price_down.Checked == false)
+            {
+                string det = "SELECT * FROM Details";
+                Loading(det, detail_list);
+                alpha_sortirovka.Enabled = true;
+                price_up.Enabled = true;
+            }
+        }
+
+        private void price_up_CheckedChanged(object sender, EventArgs e)
+        {
+            if (price_up.Checked == true)
+            {
+                string det = "SELECT * FROM Details ORDER BY Price DESC";
+                Loading(det, detail_list);
+                price_down.Enabled = false;
+                alpha_sortirovka.Enabled = false;
+            }
+            else if (price_up.Checked == false)
+            {
+                string det = "SELECT * FROM Details";
+                Loading(det, detail_list);
+                alpha_sortirovka.Enabled = true;
+                price_down.Enabled = true;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                string det = "SELECT * FROM History_Price ORDER BY Price ASC";
+                Loading(det, history_list);
+                checkBox1.Enabled = false;
+            }
+            else if (checkBox4.Checked == false)
+            {
+                string det = "SELECT * FROM History_Price";
+                Loading(det, history_list);
+                checkBox1.Enabled = true;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                string det = "SELECT * FROM History_Price ORDER BY Price DESC";
+                Loading(det, history_list);
+                checkBox1.Enabled = false;
+            }
+            else if (checkBox1.Checked == false)
+            {
+                string det = "SELECT * FROM History_Price";
+                Loading(det, history_list);
+                checkBox1.Enabled = true;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                string prov = "SELECT * FROM Providers ORDER BY Appelation ASC";
+                Loading(prov, provider_list);
+            }
+            else if (checkBox5.Checked == false)
+            {
+                string prov = "SELECT * FROM Providers";
+                Loading(prov, provider_list);
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked == true)
+            {
+                string det = "SELECT * FROM Shipments ORDER BY Quantity ASC";
+                Loading(det, history_list);
+            }
+            else if (checkBox6.Checked == false)
+            {
+                string det = "SELECT * FROM Shipments";
+                Loading(det, history_list);
+            }
+        }
     }
 }
