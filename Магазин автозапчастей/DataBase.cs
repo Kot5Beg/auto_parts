@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Магазин_автозапчастей
 {
@@ -34,6 +35,15 @@ namespace Магазин_автозапчастей
             dt.Load(dr);
             CloseConnection();
             return dt;
+        }
+
+        public static void Delete(DataGridView grid, string delete)
+        {
+            DataBase.OpenCon();
+            var num = (int)grid.CurrentRow.Cells["ID"].Value;
+            SqlCommand sc = new SqlCommand(String.Format(delete, num), DataBase.Con);
+            sc.ExecuteNonQuery();
+            DataBase.CloseConnection();
         }
     }
 }

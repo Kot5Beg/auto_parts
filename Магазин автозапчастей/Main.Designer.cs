@@ -391,6 +391,7 @@
             this.delete_ship.TabIndex = 8;
             this.delete_ship.Text = "Удалить";
             this.delete_ship.UseVisualStyleBackColor = true;
+            this.delete_ship.Click += new System.EventHandler(this.delete_ship_Click);
             // 
             // button1
             // 
@@ -400,6 +401,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Удалить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -429,6 +431,7 @@
             this.button4.TabIndex = 11;
             this.button4.Text = "Удалить";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

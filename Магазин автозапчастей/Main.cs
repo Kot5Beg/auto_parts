@@ -132,5 +132,56 @@ namespace Магазин_автозапчастей
             string salesearch = "SELECT * FROM Sales WHERE CONCAT (ID_Customer, ID_Details, Quantity, Price) LIKE '%" + textBox7.Text + "%' ";
             Loading(salesearch, sale_list);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    string del_sale = "DELETE FROM Sales WHERE ID = {0}";
+                    DataBase.Delete(sale_list, del_sale);
+                    MessageBox.Show("Запись удалена");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    string del_cust = "DELETE FROM Customers WHERE ID = {0}";
+                    DataBase.Delete(customer_list, del_cust);
+                    MessageBox.Show("Запись удалена");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void delete_ship_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    string del_ship = "DELETE FROM Shipments WHERE ID = {0}";
+                    DataBase.Delete(shipment_list, del_ship);
+                    MessageBox.Show("Запись удалена");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
     }
 }
