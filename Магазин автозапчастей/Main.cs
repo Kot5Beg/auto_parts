@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Магазин_автозапчастей
 {
     public partial class Main : Form
     {
         public static DataTable res;
+        string i;
 
         public Main()
         {
@@ -314,13 +316,13 @@ namespace Магазин_автозапчастей
             {
                 string det = "SELECT * FROM History_Price ORDER BY Price DESC";
                 Loading(det, history_list);
-                checkBox1.Enabled = false;
+                checkBox4.Enabled = false;
             }
             else if (checkBox1.Checked == false)
             {
                 string det = "SELECT * FROM History_Price";
                 Loading(det, history_list);
-                checkBox1.Enabled = true;
+                checkBox4.Enabled = true;
             }
         }
 
@@ -350,6 +352,29 @@ namespace Магазин_автозапчастей
                 string det = "SELECT * FROM Shipments";
                 Loading(det, history_list);
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string filter_ship = "SELECT * FROM Shipments WHERE ID_Provider = '" + i + "'";
+            Loading(filter_ship, shipment_list);
+        }
+
+        private void comboBox3_SelectedValueChanged(object sender, EventArgs e)
+        {
+            i = comboBox3.SelectedValue.ToString();
+        }
+
+        public void LoadProv()
+        {
+            SqlCommand sc = new SqlCommand("SELECT * FROM Providers", DataBase.Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sc);
+            da.Fill(dt);
+            comboBox3.DataSource = dt;
+            comboBox3.DisplayMember = "Appelation";
+            comboBox3.ValueMember = "ID";
+            comboBox3.SelectedIndex = 0;
         }
     }
 }

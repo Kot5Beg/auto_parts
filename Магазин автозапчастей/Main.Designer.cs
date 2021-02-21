@@ -352,6 +352,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(224, 27);
             this.comboBox3.TabIndex = 14;
+            this.comboBox3.SelectedValueChanged += new System.EventHandler(this.comboBox3_SelectedValueChanged);
             // 
             // label16
             // 
@@ -370,6 +371,7 @@
             this.button7.TabIndex = 12;
             this.button7.Text = "Выбрать";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // checkBox6
             // 
