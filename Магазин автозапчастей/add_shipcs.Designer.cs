@@ -123,6 +123,7 @@
             this.add_ship_but.TabIndex = 9;
             this.add_ship_but.Text = "Добавить";
             this.add_ship_but.UseVisualStyleBackColor = true;
+            this.add_ship_but.Click += new System.EventHandler(this.add_ship_but_Click);
             // 
             // add_shipcs
             // 
@@ -140,7 +141,7 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "add_shipcs";
             this.Text = "Регистрация поставки";
             this.ResumeLayout(false);

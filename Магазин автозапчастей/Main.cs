@@ -50,6 +50,7 @@ namespace Магазин_автозапчастей
             {
                 string ship = "SELECT * FROM Shipments";
                 Loading(ship, shipment_list);
+                LoadProv();
             }
             else if (menu.SelectedTab == Customers)
             {

@@ -48,6 +48,7 @@
             this.add_sale_but.TabIndex = 0;
             this.add_sale_but.Text = "Продать";
             this.add_sale_but.UseVisualStyleBackColor = true;
+            this.add_sale_but.Click += new System.EventHandler(this.add_sale_but_Click);
             // 
             // label1
             // 
@@ -140,7 +141,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.add_sale_but);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "add_sale";
             this.Text = "Оформление продажи";
             this.ResumeLayout(false);

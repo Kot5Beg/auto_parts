@@ -64,6 +64,12 @@
     <Compile Include="add_shipcs.Designer.cs">
       <DependentUpon>add_shipcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="autorization.cs">
       <SubType>Form</SubType>
     </Compile>
