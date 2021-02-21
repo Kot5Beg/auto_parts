@@ -80,6 +80,9 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.sale_list = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.Details.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detail_list)).BeginInit();
@@ -112,6 +115,7 @@
             // 
             // Details
             // 
+            this.Details.Controls.Add(this.button10);
             this.Details.Controls.Add(this.price_up);
             this.Details.Controls.Add(this.price_down);
             this.Details.Controls.Add(this.alpha_sortirovka);
@@ -376,7 +380,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(686, 118);
+            this.checkBox6.Location = new System.Drawing.Point(686, 111);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(134, 23);
             this.checkBox6.TabIndex = 10;
@@ -387,7 +391,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(698, 83);
+            this.label15.Location = new System.Drawing.Point(698, 76);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(96, 19);
             this.label15.TabIndex = 9;
@@ -450,6 +454,7 @@
             // 
             // Customers
             // 
+            this.Customers.Controls.Add(this.button9);
             this.Customers.Controls.Add(this.checkBox10);
             this.Customers.Controls.Add(this.checkBox9);
             this.Customers.Controls.Add(this.checkBox8);
@@ -470,7 +475,7 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(684, 241);
+            this.checkBox10.Location = new System.Drawing.Point(679, 192);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(117, 23);
             this.checkBox10.TabIndex = 15;
@@ -481,7 +486,7 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(684, 211);
+            this.checkBox9.Location = new System.Drawing.Point(679, 162);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(116, 23);
             this.checkBox9.TabIndex = 14;
@@ -492,7 +497,7 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(684, 181);
+            this.checkBox8.Location = new System.Drawing.Point(679, 132);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(96, 23);
             this.checkBox8.TabIndex = 13;
@@ -503,7 +508,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(702, 141);
+            this.label17.Location = new System.Drawing.Point(697, 92);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(96, 19);
             this.label17.TabIndex = 12;
@@ -566,6 +571,7 @@
             // 
             // Sales
             // 
+            this.Sales.Controls.Add(this.button8);
             this.Sales.Controls.Add(this.button4);
             this.Sales.Controls.Add(this.button5);
             this.Sales.Controls.Add(this.button6);
@@ -633,6 +639,36 @@
             this.sale_list.Name = "sale_list";
             this.sale_list.Size = new System.Drawing.Size(621, 484);
             this.sale_list.TabIndex = 1;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(636, 210);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(225, 41);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "Импорт в Excel";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(636, 246);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(223, 41);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "Импорт в Excel";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(678, 293);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(152, 41);
+            this.button10.TabIndex = 8;
+            this.button10.Text = "Импорт в Excel";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // Main
             // 
@@ -734,5 +770,8 @@
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
